@@ -19,8 +19,8 @@
             
               <li role="menuitem"><a href="{{ route('home') }}">Home</a></li>
             <li role="menuitem"><a href="{{ route('clients') }}">Clients</a></li>
-            <li role="menuitem"><a href="{{ route('reservations') }}">Reservation</a></li>
-            <li role="menuitem"><a href="{{ route('contact') }}">Contact</a></li>
+            
+           
           </ul>
         </div>
       </div>
