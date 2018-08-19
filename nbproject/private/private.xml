@@ -8,7 +8,10 @@
             <file>file:/C:/xampp/htdocs/laravel/landon_app/app/Http/Controllers/ClientController.php</file>
             <file>file:/C:/xampp/htdocs/laravel/landon_app/app/Reservation.php</file>
             <file>file:/C:/xampp/htdocs/laravel/landon_app/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/laravel/landon_app/resources/views/rooms/checkAvailableRooms.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel/landon_app/app/Room.php</file>
             <file>file:/C:/xampp/htdocs/laravel/landon_app/app/Client.php</file>
+            <file>file:/C:/xampp/htdocs/laravel/landon_app/app/Http/Controllers/RoomsController.php</file>
         </group>
     </open-files>
 </project-private>
