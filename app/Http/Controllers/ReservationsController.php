@@ -11,6 +11,11 @@ use Illuminate\Http\Request;
 class ReservationsController extends Controller
 {
     //
+    public function __construct(Reservation $reservation )
+    {
+        $this->reservation = $reservation;
+    }
+    
     public function bookRoom($client_id, $room_id, $date_in, $date_out)
     {
         $reservation = new Reservation();
@@ -36,6 +41,11 @@ class ReservationsController extends Controller
     }
     
     public function index(){
-        return view('reservations/index');
+        
+        $data = [];
+
+        $data['reservation'] = $this->reservation->all();
+        
+        return view('reservations/index', $data);
     }
 }
