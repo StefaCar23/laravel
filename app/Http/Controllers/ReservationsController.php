@@ -48,4 +48,6 @@ class ReservationsController extends Controller
         
         return view('reservations/index', $data);
     }
+    
+    
 }
