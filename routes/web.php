@@ -25,9 +25,14 @@ Route::get('/reservations/{client_id}', 'RoomsController@checkAvailableRooms')->
 Route::post('/reservations/{client_id}', 'RoomsController@checkAvailableRooms')->name('check_room');
 
 Route::get('/book/room/{client_id}/{room_id}/{date_in}/{date_out}', 'ReservationsController@bookRoom')->name('book_room');
+
+Route::get('/upload', 'ContentsController@upload')->name('upload');
+Route::post('/upload', 'ContentsController@upload')->name('upload');
+
+
 } ) ;
 
-
+Route::get('export', 'ClientController@export');
 Route::get('/about', function () {
     $response_arr = [];
     $response_arr['author'] = 'BP';
@@ -64,4 +69,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/generate/password', function(){return bcrypt('Udjipescanicovece1!'); } );
+Route::get('/generate/password', function(){return bcrypt('Djolesvetskafaca1!'); } );

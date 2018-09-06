@@ -27,6 +27,15 @@ class ClientController extends Controller
         $data['clients'] = $this->client->all();
         return view('client/index', $data);
     }
+    
+    public function export()
+    {
+        $data = [];
+
+        $data['clients'] = $this->client->all();
+        header('Content-Disposition: attachement;filename=export.xls');
+        return view('client/export', $data);
+    }
 
     public function newClient( Request $request, Client $client )
     {
@@ -52,10 +61,10 @@ class ClientController extends Controller
                     'name' => 'required|min:5',
                     'last_name' => 'required',
                     'address' => 'required',
-                    'zip_code' => 'required',
+                    'zip_code' => 'required|numeric',
                     'city' => 'required',
                     'state' => 'required',
-                    'email' => 'required',
+                    'email' => 'required|email',
 
                 ]
             );
@@ -116,10 +125,10 @@ class ClientController extends Controller
                     'name' => 'required|min:5',
                     'last_name' => 'required',
                     'address' => 'required',
-                    'zip_code' => 'required',
+                    'zip_code' => 'required|numeric',
                     'city' => 'required',
                     'state' => 'required',
-                    'email' => 'required',
+                    'email' => 'required|email',
 
                 ]
             );

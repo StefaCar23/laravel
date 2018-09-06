@@ -20,4 +20,17 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+    
+    /*public function testNewClientFrom()
+    {
+        $response = $this->get('/clients/new');
+        $response->assertStatus(200);
+    }*/
+    
+    public function testProfessorOption()
+    {
+        $responce = $this->get('/clients/new');
+        $this->assertContains('Professor', $responce->getContent(),'HTML should contain professor!');
+        
+    }
 }
